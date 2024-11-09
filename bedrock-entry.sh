@@ -108,7 +108,7 @@ if [[ ! -f "bedrock_server-${VERSION}" ]]; then
   TMP_ZIP="$TMP_DIR/$(basename "${DOWNLOAD_URL}")"
 
   echo "Downloading Bedrock server version ${VERSION} ..."
-  if ! curl "${curlArgs[@]}" -o "${TMP_ZIP}" -A "itzg/minecraft-bedrock-server" -fsSL "${DOWNLOAD_URL}"; then
+  if ! curl "${curlArgs[@]}" -o "${TMP_ZIP}" -A "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" -fsSL "${DOWNLOAD_URL}"; then
     echo "ERROR failed to download from ${DOWNLOAD_URL}"
     echo "      Double check that the given VERSION is valid"
     exit 2
